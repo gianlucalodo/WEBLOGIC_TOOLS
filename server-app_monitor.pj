@@ -111,7 +111,7 @@ print separator
 print '\n'
 
 # print errors
-print 'ERRORI_CONTROLLO:';
+print 'ERRORS:';
 for key in errDict.keys():
         print errDict[key] 
 
