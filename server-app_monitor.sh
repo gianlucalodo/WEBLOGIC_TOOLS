@@ -1,6 +1,7 @@
 #!/usr/bin/ksh
 
-#this script launch WLST server-app_monitor.pj
+# simple script that monitor Weblogic server status and applications status
+# this script launch WLST server-app_monitor.pj
 
 WORKDIR="<set here workdir>"
 
