@@ -21,10 +21,11 @@ for opt, arg in opts:
 
 
 jmsservername='<insert here jms server name>' + Serv
-jmsmodulename='insert here JMSModule name'
-jmsdestname='gs_be_promo_' + Serv
+jmsmodulename='<insert here JMSModule name>'
+jmsdestname='<insert here destination name>' + Serv
 queuename='<insert here queue name>'
 
+### insert here string to search inside message
 strtosearch='<insert here string to search>'
 
 Path="<insert here path where find auyhentication files, or import from argv>"
@@ -52,10 +53,10 @@ print ' Deleted=0 -> record not deleted'
 
 #Get all the messages as an array of javax.management.openmbean.CompositeData
 #messages = cmo.getNext(cursor, cursorsize) 
-fetta=1
+piece=1
 i=0
 while (i < cursorsize):
-        messages = cmo.getItems(cursor,i,fetta)
+        messages = cmo.getItems(cursor,i,piece)
         
         #Loop through the array of messages
         for message in messages:
@@ -101,7 +102,7 @@ while (i < cursorsize):
                         print '***Not a Text or Object Message***'
                         print fullwlmsg.toString()
                 #print ' '
-                i=i+ fetta ;
+                i=i+ piece;
 
 #Close cursor as No Time Out specified - Best practice
 cmo.closeCursor(cursor)
