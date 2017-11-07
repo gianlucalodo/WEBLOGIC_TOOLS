@@ -1,4 +1,6 @@
 
+# simple WLST script to delete JMS messages
+
 from weblogic.jms.extensions import JMSMessageInfo
 from javax.jms import TextMessage
 from javax.jms import ObjectMessage
